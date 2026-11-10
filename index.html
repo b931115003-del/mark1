@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>馬克 Mark - 職業爵士鼓手與教育者</title>
+    <!-- 引入 Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 引入 Font Awesome 經由 CDN 取得鼓、樂器與社群圖示 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- 引入 Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Montserrat:ital,wght@0,300;0,400;0,600;1,300&family=Noto+Serif+TC:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', 'Noto Serif TC', sans-serif;
+            background-color: #0b0b0e;
+            color: #e5e5e5;
+            overflow-x: hidden;
+        }
+        /* 爵士金屬色漸層 */
+        .gold-gradient {
+            background: linear-gradient(135deg, #f3e7c4 0%, #d4af37 50%, #aa7c11 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gold-border {
+            border-image: linear-gradient(to bottom right, #d4af37, #33270a) 1;
+        }
+        .card-bg {
+            background: radial-gradient(circle at 50% 0%, #1a1921 0%, #0e0d12 70%);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7), 0 0 30px rgba(212, 175, 55, 0.08);
+        }
+        /* 黑膠唱片旋轉裝飾動畫 */
+        @keyframes spin-slow {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .vinyl-spin {
+            animation: spin-slow 20s linear infinite;
+        }
+        /* 浮動音符動畫 */
+        @keyframes float-note {
+            0% { transform: translateY(0px) opacity(0.2); }
+            50% { transform: translateY(-15px) opacity(0.6); }
+            100% { transform: translateY(0px) opacity(0.2); }
+        }
+        .note-float-1 { animation: float-note 4s ease-in-out infinite; }
+        .note-float-2 { animation: float-note 6s ease-in-out infinite 1s; }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-4 sm:p-6 relative">
+
+    <!-- 背景動態光暈裝飾 -->
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-amber-600/10 rounded-full blur-3xl pointer-events-none"></div>
+
+    <!-- 數位名片主容器 -->
+    <main class="w-full max-w-[420px] card-bg rounded-3xl border border-amber-500/20 p-8 sm:p-10 flex flex-col items-center text-center relative z-10">
+        
+        <!-- 背景裝飾：黑膠唱片圖騰水印 (極低透明度) -->
+        <div class="absolute -top-12 -right-12 w-48 h-48 rounded-full border border-amber-500/10 vinyl-spin pointer-events-none flex items-center justify-center">
+            <div class="w-36 h-36 rounded-full border border-dashed border-amber-500/10"></div>
+        </div>
+
+        <!-- 頂部標誌：鼓棒與音符 -->
+        <div class="flex items-center space-x-3 mb-6 text-amber-400">
+            <i class="fa-solid fa-music text-xs note-float-1"></i>
+            <div class="w-12 h-[1px] bg-amber-500/40"></div>
+            <i class="fa-solid fa-drum text-lg"></i>
+            <div class="w-12 h-[1px] bg-amber-500/40"></div>
+            <i class="fa-solid fa-music text-xs note-float-2"></i>
+        </div>
+
+        <!-- 姓名與外文名 -->
+        <header class="mb-5">
+            <h1 class="text-4xl sm:text-5xl font-bold tracking-widest gold-gradient mb-2 font-['Cinzel']">
+                MARK
+            </h1>
+            <p class="text-xs sm:text-sm tracking-[0.25em] text-amber-200/70 uppercase font-medium">
+                馬克 · 爵士鼓手與導師
+            </p>
+        </header>
+
+        <!-- 頭銜標籤 -->
+        <div class="inline-block px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs tracking-wider mb-6">
+            PROFESSIONAL JAZZ DRUMMER & EDUCATOR
+        </div>
+
+        <!-- Slogan 引言 -->
+        <div class="relative my-2 px-6 py-3 border-y border-amber-500/20 w-full">
+            <p class="text-sm sm:text-base italic font-serif text-stone-300 tracking-wide">
+                「 節奏的靈魂，律動的藝術 」
+            </p>
+            <p class="text-[11px] text-amber-400/60 mt-1 tracking-widest uppercase">
+                The Soul of Rhythm, The Art of Groove
+            </p>
+        </div>
+
+        <!-- 經歷簡介 -->
+        <section class="my-6 text-xs text-stone-400 leading-relaxed tracking-wider space-y-1">
+            <p>職業爵士鼓演奏家・資深爵士鼓導師</p>
+            <p>專注於即興律動美學與爵士鼓技巧傳承</p>
+        </section>
+
+        <!-- 互動按鈕區塊 -->
+        <div class="w-full space-y-3 mt-4">
+            <!-- 預約課程 / 邀演聯繫 -->
+            <a href="https://line.me" target="_blank" class="w-full py-3.5 px-6 rounded-xl bg-gradient-to-r from-amber-600 to-yellow-600 text-stone-950 font-semibold text-sm tracking-wider flex items-center justify-center space-x-2 shadow-lg shadow-amber-900/40 hover:opacity-95 transition-all">
+                <i class="fa-brands fa-line text-lg"></i>
+                <span>預約課程 / 演出洽詢</span>
+            </a>
+
+            <!-- 影音作品 / 連結 -->
+            <a href="#portfolio" onclick="alertMsg('即將連結至演出作品與鼓組實錄頻道')" class="w-full py-3 px-6 rounded-xl bg-stone-900/80 border border-amber-500/30 text-amber-300 font-medium text-sm tracking-wider flex items-center justify-center space-x-2 hover:bg-amber-500/10 transition-all">
+                <i class="fa-solid fa-compact-disc"></i>
+                <span>觀看演奏精華</span>
+            </a>
+        </div>
+
+        <!-- 底部社群圖示 -->
+        <footer class="mt-8 pt-6 border-t border-amber-500/20 w-full flex justify-center space-x-6 text-amber-400/70">
+            <a href="#" class="hover:text-amber-400 transition-colors text-lg" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="hover:text-amber-400 transition-colors text-lg" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" class="hover:text-amber-400 transition-colors text-lg" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" class="hover:text-amber-400 transition-colors text-lg" title="Email"><i class="fa-regular fa-envelope"></i></a>
+        </footer>
+
+    </main>
+
+    <!-- 自訂訊息提示框 (避免使用 alert) -->
+    <div id="msgBox" class="fixed bottom-6 left-1/2 -translate-x-1/2 bg-stone-900 border border-amber-500/50 text-amber-200 px-5 py-3 rounded-xl shadow-2xl text-xs tracking-wider opacity-0 pointer-events-none transition-opacity duration-300 z-50">
+        音樂作品集頁面即將上線！
+    </div>
+
+    <script>
+        function alertMsg(text) {
+            const box = document.getElementById('msgBox');
+            box.innerText = text;
+            box.style.opacity = '1';
+            setTimeout(() => {
+                box.style.opacity = '0';
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
